@@ -117,12 +117,20 @@ navbar a.active {
 }
 
 /* PROFILE IMAGE */
-.hero-image img {
-    max-width: 400px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
-    padding: 10px;
-    transition: transform 0.3s ease-in-out;
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid #4A90E2;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image img:hover {
@@ -243,19 +251,29 @@ navbar a.active {
     margin-top: 20px;
 }
 
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* gives space between boxes */
+    padding: 50px;
+    flex-wrap: wrap; /* makes it responsive */
+}
+
 .about-box {
     background: white;
-    padding: 15px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 30%;
+    text-align: left;
+    flex: 0 0 calc(50% - 15px); /* exactly 2 boxes with space */
     transition: transform 0.3s ease-in-out;
+    min-height: 250px;
 }
 
 .about-box:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
+
 
 /* SKILLS SECTION */
 .skills {
@@ -326,7 +344,7 @@ navbar a.active {
 }
 /* ========== Experience & Projects Section ========== */
 #experience, #projects {
-    padding: 60px 10%;
+    padding: 100px 25%;
     background: linear-gradient(to right, #ffe3e3, #ffd6d6); /* Soft pastel gradient */
 }
 
